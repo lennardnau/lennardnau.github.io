@@ -1,11 +1,21 @@
 ---
-title: "lennardnau.github.io"
+title: ""
+image: portrait.jpg
+about:
+  template: jolla
+  image-shape: rounded
+  links:
+    - icon: github
+      href: https://github.com/lennardnau
+      text: Github
+    - icon: google
+      href: https://scholar.google.de/citations?user=HitgLnwAAAAJ&hl=de&oi=ao
+      text: Google Scholar
+    - icon: envelope
+      href: mailto:lennard.naumann@wzb.eu
+      text: Email
+    - href: https://orcid.org/my-orcid?orcid=0000-0003-4261-1080
+      text: ORCID
 ---
 
-This is a Quarto website.
-
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
-
-```{r}
-1 + 1
-```
+Hi! I'm a a researcher in the *Institutions and Political Inequality* unit at the WZB Berlin Social Science Center, and an affiliated member of the Research Training Group *The Dynamics of Demography, Democratic Processes and Public Policy* (DYNAMICS). My work focuses on intergroup relations, prejudice, and outgroup avoidance, using experimental and quasi-experimental methods. In addition, I am interested in webscraping and the use of Large Language Models (LLM) in the social sciences. Feel free to get in touch: lennard\[dot\]naumann\[at\]wzb\[dot\]eu
