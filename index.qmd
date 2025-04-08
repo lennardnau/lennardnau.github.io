@@ -15,7 +15,7 @@ about:
     - icon: envelope
       href: mailto:lennard.naumann@wzb.eu
       text: Email
-    - href: https://orcid.org/my-orcid?orcid=0000-0003-4261-1080
+    - href: https://orcid.org/0000-0003-4261-1080
       text: ORCID
 ---
 
