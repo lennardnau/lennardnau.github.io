@@ -1,0 +1,30 @@
+/*-- scss:defaults --*/
+
+// Adjust the navbar font size
+.navbar-brand {
+    font-size: 1rem;
+}
+.navbar-nav .nav-link {
+    font-size: 1rem; 
+}
+
+// Remove space between navbar and image
+img {
+    margin-top: -5rem; 
+}
+
+// Indent navbar links
+.navbar-brand {
+    margin-left: 2rem;
+}
+
+// Change link colors
+body a {
+    color: #aebfca; 
+}
+body a:hover {
+    color: #aebfca;
+}
+body a:visited {
+    color: #c0d6e3; 
+}

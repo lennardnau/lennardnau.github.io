@@ -4,6 +4,7 @@ image: portrait.jpg
 about:
   template: jolla
   image-shape: rounded
+  image-width: 12rem
   links:
     - icon: github
       href: https://github.com/lennardnau
@@ -18,4 +19,4 @@ about:
       text: ORCID
 ---
 
-Hi! I'm a a researcher in the *Institutions and Political Inequality* unit at the WZB Berlin Social Science Center, and an affiliated member of the Research Training Group *The Dynamics of Demography, Democratic Processes and Public Policy* (DYNAMICS). My work focuses on intergroup relations, prejudice, and outgroup avoidance, using experimental and quasi-experimental methods. In addition, I am interested in webscraping and the use of Large Language Models (LLM) in the social sciences. Feel free to get in touch: lennard\[dot\]naumann\[at\]wzb\[dot\]eu
+Hi! I'm a a researcher in the [*Institutions and Political Inequality* unit at the WZB Berlin Social Science Center](https://www.wzb.eu/en/research/political-economy-of-development/institutions-and-political-inequality), and an affiliated member of the Research Training Group [*The Dynamics of Demography, Democratic Processes and Public Policy* (DYNAMICS)](https://www.sowi.hu-berlin.de/en/dynamics). My work focuses on intergroup relations, prejudice, and outgroup avoidance, using experimental and quasi-experimental methods. In addition, I am interested in webscraping and the use of Large Language Models (LLM) in the social sciences. Feel free to get in touch: lennard\[dot\]naumann\[at\]wzb\[dot\]eu

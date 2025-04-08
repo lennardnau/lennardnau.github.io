@@ -12,9 +12,8 @@ website:
 format:
   html:
     theme: 
-      light: flatly
-      dark: darkly
-    css: styles.css
+      light: [flatly, custom_theming.scss]
+      dark: [darkly, custom_theming.scss]
     toc: true
     page-layout: full
 
