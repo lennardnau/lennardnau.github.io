@@ -1,0 +1,84 @@
+---
+toc: false
+callout-appearance: simple
+---
+
+```{r, results='asis', echo=FALSE, message=FALSE}
+
+library(tidyverse)
+library(glue)
+library(readxl)
+
+df <- read_xlsx("projects.xlsx")
+df$id <- 1:nrow(df)
+
+for(cat in unique(df$category)){
+  cat("## ", cat, "\n")
+  df.cat <- filter(df, category == cat)
+  for(i in 1:nrow(df.cat)){
+    # Prepare authors + links
+    authors <- paste0(
+      "<a href=", 
+      str_split(df.cat[i,"author_links"], ",", simplify = T),
+      ">",
+      str_split(df.cat[i,"authors"], ",", simplify = T) |> str_squish(),
+      "</a>"
+    )
+    if(all(authors ==  "<a href=.>.</a>")){ authors <- ""
+      }else if(length(authors) == 2){
+        authors <- paste0(" (with ",
+                          paste(authors, collapse = " and "), ")")
+      }else if(length(authors)  > 2){
+        authors <- paste0(" (with ",
+                          paste0(
+                            paste(authors[-length(authors)], collapse = ", "),
+                            ", and ", last(authors)), ")")
+      }else{
+        authors <- paste0(", with ", authors)
+      }
+    
+    # Prepare journal
+    journal <- ifelse(df.cat$journal[i] == ".", "", 
+                      paste0("<br><em>Published in ", df.cat$journal[i], "</em>"))
+    
+    # Prepare year
+    year <- ifelse(df.cat$year[i] == ".", "", 
+                   paste(",", df.cat$year[i], "."))
+
+    # Prepare prereg
+    prereg <- ifelse(df.cat$prereg[i] == ".", "", 
+                     paste0("&nbsp;<a href=", df.cat$prereg[i],">[Preregistration]</a>"))
+
+    # Prepare pap
+    pap <- ifelse(df.cat$pap[i] == ".", "", 
+                     paste0("&nbsp;<a href=", df.cat$pap[i],">[PAP]</a>"))
+
+    # Prepare article
+    article <- ifelse(df.cat$article[i] == ".", "", 
+                     paste0("&nbsp;<a href=", df.cat$article[i],">[Research article]</a>"))
+
+    # Prepare blog
+    blog <- ifelse(df.cat$blog[i] == ".", "", 
+                     paste0("&nbsp;<a href=", df.cat$blog[i],">[Blog article]</a>"))
+    
+    
+    
+    # Output html
+    cat(glue(
+      '<span> <strong><em>{df.cat$title[i]}</em></strong>{authors}.{journal}{year} <br> </span>
+      <a href="#" data-bs-toggle="collapse" data-bs-target="#collapse{df.cat[i,"id"]}" aria-expanded="false" aria-controls="collapseExample">
+      [Abstract]</a> {prereg} {pap} {article} {blog}
+      <div class="collapse" id="collapse{df.cat[i,"id"]}">
+      <div class="card card-body">
+      {df.cat$abstract[i]}
+      </div>
+      </div>
+      <br><br>'
+      
+    ))
+  }
+  
+  cat("\n\n")
+}
+```
+

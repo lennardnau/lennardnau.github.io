@@ -9,7 +9,12 @@ website:
   navbar:
     left:
       - href: index.qmd
-        text: Home
+        text: About
+      - href: research.qmd
+        text: Research
+  page-footer:
+    left: © 2025 Lennard Naumann
+  
 format:
   html:
     theme: 
