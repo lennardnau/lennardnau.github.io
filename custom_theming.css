@@ -12,6 +12,11 @@
 img {
     margin-top: -5rem; 
 }
+@media (max-width: 870px) {
+  img {
+    margin-top: -1rem;   /* or try -1rem, etc, for minor overlap */
+  }
+}
 
 // Indent navbar links
 .navbar-brand {
