@@ -4,14 +4,14 @@ project:
   output-dir: docs
 
 website:
-  title: "Lennard Naumann"
   search: false
   navbar:
+    title: false
     left:
       - href: index.qmd
-        text: About
+        text: About me
       - href: research.qmd
-        text: Research
+        text: My research
   page-footer:
     left: © 2025 Lennard Naumann
   

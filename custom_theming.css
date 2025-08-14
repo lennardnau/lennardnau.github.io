@@ -1,13 +1,5 @@
 /*-- scss:defaults --*/
 
-// Adjust the navbar font size
-.navbar-brand {
-    font-size: 1rem;
-}
-.navbar-nav .nav-link {
-    font-size: 1rem; 
-}
-
 // Remove space between navbar and image
 img {
     margin-top: -5rem; 
@@ -18,10 +10,25 @@ img {
   }
 }
 
-// Indent navbar links
-.navbar-brand {
-    margin-left: 2rem;
+/* Prevent navbar collapsing */
+.navbar-collapse {
+  display: flex !important;
+  flex-wrap: wrap !important;
 }
+
+/* Always show navbar toggler as hidden */
+.navbar-toggler {
+  display: none !important;
+}
+
+/* Allow links to shrink and wrap */
+.navbar-nav > li > a {
+  white-space: normal;
+  font-size: 0.8rem; /* smaller font */
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
 
 // Change link colors
 body a {

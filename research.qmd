@@ -20,21 +20,23 @@ for(cat in unique(df$category)){
     authors <- paste0(
       "<a href=", 
       str_split(df.cat[i,"author_links"], ",", simplify = T),
+      ' style="color: black; text-decoration: none;"',
       ">",
       str_split(df.cat[i,"authors"], ",", simplify = T) |> str_squish(),
       "</a>"
     )
-    if(all(authors ==  "<a href=.>.</a>")){ authors <- ""
+    if(all(authors |> str_detect("<a href=\\."))){ authors <- ""
       }else if(length(authors) == 2){
-        authors <- paste0(" (with ",
-                          paste(authors, collapse = " and "), ")")
+        authors <- paste0(" <br><em>With ",
+                          paste(authors, collapse = " and "), "</em>")
       }else if(length(authors)  > 2){
-        authors <- paste0(" (with ",
+        authors <- paste0(" <br><em>With ",
                           paste0(
                             paste(authors[-length(authors)], collapse = ", "),
-                            ", and ", last(authors)), ")")
+                            ", and ", last(authors)),
+                          "</em>")
       }else{
-        authors <- paste0(", with ", authors)
+        authors <- paste0(" <br><em>With ", authors, "</em>")
       }
     
     # Prepare journal
@@ -43,7 +45,7 @@ for(cat in unique(df$category)){
     
     # Prepare year
     year <- ifelse(df.cat$year[i] == ".", "", 
-                   paste(",", df.cat$year[i], "."))
+                   paste(",", df.cat$year[i]))
 
     # Prepare prereg
     prereg <- ifelse(df.cat$prereg[i] == ".", "", 
@@ -65,7 +67,7 @@ for(cat in unique(df$category)){
     
     # Output html
     cat(glue(
-      '<span> <strong><em>{df.cat$title[i]}</em></strong>{authors}.{journal}{year} <br> </span>
+      '<span> <strong>{df.cat$title[i]}</strong>{authors}{journal}{year}<br> </span>
       <a href="#" data-bs-toggle="collapse" data-bs-target="#collapse{df.cat[i,"id"]}" aria-expanded="false" aria-controls="collapseExample">
       [Abstract]</a> {prereg} {pap} {article} {blog}
       <div class="collapse" id="collapse{df.cat[i,"id"]}">
@@ -81,4 +83,3 @@ for(cat in unique(df$category)){
   cat("\n\n")
 }
 ```
-
