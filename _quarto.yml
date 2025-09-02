@@ -1,6 +1,8 @@
-project:
+project: 
   type: website
-  resources: "google104c65d255c80fff.html"
+  resources: 
+    - "google104c65d255c80fff.html"
+    - lebanon-slides.pdf
   output-dir: docs
 
 website:
