@@ -2,7 +2,7 @@ project:
   type: website
   resources: 
     - "google104c65d255c80fff.html"
-    - lebanon-slides.pdf
+    - slides.html
   output-dir: docs
 
 website:
