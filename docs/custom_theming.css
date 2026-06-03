@@ -9,7 +9,7 @@
 
 /* Link colors — lilac, no underline */
 a, a:link {
-  color: #a381e1 !important;
+  color: #7b5eb2 !important;
   text-decoration: none !important;
 }
 a:hover {
@@ -17,5 +17,5 @@ a:hover {
   text-decoration: none !important;
 }
 a:visited {
-  color: #a381e1 !important;
+  color: #7b5eb2 !important;
 }
