@@ -5,29 +5,46 @@ project:
     - slides.html
   output-dir: docs
 
+title: Lennard Naumann
+subtitle: |
+  PhD Researcher \
+  WZB Berlin Social Science Center \
+  DYANMICS Research Training Group \
+  [lennard.naumann@wzb.eu](mailto:lennard.naumann@wzb.eu)
+
+description-meta: "Lennard Naumann Academic Website"
+author-meta: "Lennard Naumann"
+
 website:
+  title: "Lennard Naumann"
+  description: "Lennard Naumann's Academic Website"
   search: false
-  navbar:
-    title: false
-    left:
-      - href: index.qmd
-        text: About me
-      - href: research.qmd
-        text: My research
+  navbar: false
   page-footer:
-    left: © 2025 Lennard Naumann
+    left: © 2026 Lennard Naumann
   
+#format:
+#  html:
+#    theme: 
+#      light: 
+#        - flatly
+#        - custom_theming.css
+#      dark: 
+#        - darkly
+#        - custom_theming.css
+#    toc: true
+#    page-layout: full
 format:
   html:
-    theme: 
-      light: 
-        - flatly
-        - custom_theming.css
-      dark: 
-        - darkly
-        - custom_theming.css
+    theme: cosmo
+    css: custom_theming.css
     toc: true
-    page-layout: full
-
-editor: visual
-
+    footnotes-hover: true
+    code-copy: true
+    code-link: true
+    code-overflow: wrap
+    fig-align: center
+    link-external-icon: false
+    link-external-newwindow: true
+    email-obfuscation: javascript
+    link-external-filter: '^(?:http:|https:)\/\/drganghe\.github\.io\/custom'

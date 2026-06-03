@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Lennard Naumann">
+<meta name="description" content="Lennard Naumann Academic Website">
 
-<title>index</title>
+<title>Lennard Naumann</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -24,7 +26,6 @@ ul.task-list li input[type="checkbox"] {
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -32,14 +33,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea1d7ac60288e0f1efdbc993fd8432ae.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-7e9717d9caa9b4d114d189eaeb260ada.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea1d7ac60288e0f1efdbc993fd8432ae.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea1d7ac60288e0f1efdbc993fd8432ae.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-2db510328c269b74f19ae7705dd49ebf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-fe67641174ba32a528292203bab569bf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-2db510328c269b74f19ae7705dd49ebf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-5bd799761519bfa893395a4e47c2c3c4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No results",
@@ -57,251 +54,141 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
+<link rel="stylesheet" href="custom_theming.css">
 </head>
 
-<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
-    const toggleBodyColorMode = (bsSheetEl) => {
-      const mode = bsSheetEl.getAttribute("data-mode");
-      const bodyEl = window.document.querySelector("body");
-      if (mode === "dark") {
-        bodyEl.classList.add("quarto-dark");
-        bodyEl.classList.remove("quarto-light");
-      } else {
-        bodyEl.classList.add("quarto-light");
-        bodyEl.classList.remove("quarto-dark");
-      }
-    }
-    const toggleBodyColorPrimary = () => {
-      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
-      if (bsSheetEl) {
-        toggleBodyColorMode(bsSheetEl);
-      }
-    }
-    const setColorSchemeToggle = (alternate) => {
-      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
-      for (let i=0; i < toggles.length; i++) {
-        const toggle = toggles[i];
-        if (toggle) {
-          if (alternate) {
-            toggle.classList.add("alternate");
-          } else {
-            toggle.classList.remove("alternate");
-          }
-        }
-      }
-    };
-    const toggleColorMode = (alternate) => {
-      // Switch the stylesheets
-      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
-      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
-      manageTransitions('#quarto-margin-sidebar .nav-link', false);
-      if (alternate) {
-        // note: dark is layered on light, we don't disable primary!
-        enableStylesheet(alternateStylesheets);
-        for (const sheetNode of alternateStylesheets) {
-          if (sheetNode.id === "quarto-bootstrap") {
-            toggleBodyColorMode(sheetNode);
-          }
-        }
-      } else {
-        disableStylesheet(alternateStylesheets);
-        enableStylesheet(primaryStylesheets)
-        toggleBodyColorPrimary();
-      }
-      manageTransitions('#quarto-margin-sidebar .nav-link', true);
-      // Switch the toggles
-      setColorSchemeToggle(alternate)
-      // Hack to workaround the fact that safari doesn't
-      // properly recolor the scrollbar when toggling (#1455)
-      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
-        manageTransitions("body", false);
-        window.scrollTo(0, 1);
-        setTimeout(() => {
-          window.scrollTo(0, 0);
-          manageTransitions("body", true);
-        }, 40);
-      }
-    }
-    const disableStylesheet = (stylesheets) => {
-      for (let i=0; i < stylesheets.length; i++) {
-        const stylesheet = stylesheets[i];
-        stylesheet.rel = 'disabled-stylesheet';
-      }
-    }
-    const enableStylesheet = (stylesheets) => {
-      for (let i=0; i < stylesheets.length; i++) {
-        const stylesheet = stylesheets[i];
-        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
-          stylesheet.rel = 'stylesheet';
-        }
-      }
-    }
-    const manageTransitions = (selector, allowTransitions) => {
-      const els = window.document.querySelectorAll(selector);
-      for (let i=0; i < els.length; i++) {
-        const el = els[i];
-        if (allowTransitions) {
-          el.classList.remove('notransition');
-        } else {
-          el.classList.add('notransition');
-        }
-      }
-    }
-    const isFileUrl = () => {
-      return window.location.protocol === 'file:';
-    }
-    const hasAlternateSentinel = () => {
-      let styleSentinel = getColorSchemeSentinel();
-      if (styleSentinel !== null) {
-        return styleSentinel === "alternate";
-      } else {
-        return false;
-      }
-    }
-    const setStyleSentinel = (alternate) => {
-      const value = alternate ? "alternate" : "default";
-      if (!isFileUrl()) {
-        window.localStorage.setItem("quarto-color-scheme", value);
-      } else {
-        localAlternateSentinel = value;
-      }
-    }
-    const getColorSchemeSentinel = () => {
-      if (!isFileUrl()) {
-        const storageValue = window.localStorage.getItem("quarto-color-scheme");
-        return storageValue != null ? storageValue : localAlternateSentinel;
-      } else {
-        return localAlternateSentinel;
-      }
-    }
-    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
-      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
-      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
-      let newTheme = '';
-      if(authorPrefersDark) {
-        newTheme = isAlternate ? baseTheme : alternateTheme;
-      } else {
-        newTheme = isAlternate ? alternateTheme : baseTheme;
-      }
-      const changeGiscusTheme = () => {
-        // From: https://github.com/giscus/giscus/issues/336
-        const sendMessage = (message) => {
-          const iframe = document.querySelector('iframe.giscus-frame');
-          if (!iframe) return;
-          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
-        }
-        sendMessage({
-          setConfig: {
-            theme: newTheme
-          }
-        });
-      }
-      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
-      if (isGiscussLoaded) {
-        changeGiscusTheme();
-      }
-    };
-    const authorPrefersDark = false;
-    const darkModeDefault = authorPrefersDark;
-      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
-      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
-    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
-    // Dark / light mode switch
-    window.quartoToggleColorScheme = () => {
-      // Read the current dark / light value
-      let toAlternate = !hasAlternateSentinel();
-      toggleColorMode(toAlternate);
-      setStyleSentinel(toAlternate);
-      toggleGiscusIfUsed(toAlternate, darkModeDefault);
-      window.dispatchEvent(new Event('resize'));
-    };
-    // Switch to dark mode if need be
-    if (hasAlternateSentinel()) {
-      toggleColorMode(true);
-    } else {
-      toggleColorMode(false);
-    }
-  </script>
+<body class="quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
-      <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    </a>
-  </div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-  <span class="navbar-toggler-icon"></span>
-</button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
-<span class="menu-text">About me</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./research.html"> 
-<span class="menu-text">My research</span></a>
-  </li>  
-</ul>
-          </div> <!-- /navcollapse -->
-            <div class="quarto-navbar-tools">
-  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
-</div>
-      </div> <!-- /container-fluid -->
-    </nav>
-</header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
 <!-- main -->
-<div class="quarto-about-jolla column-page">
-  <img src="portrait.jpg" class="about-image
-  rounded " style="width: 12rem;">
- <header id="title-block-header" class="quarto-title-block"></header><main class="content column-page" id="quarto-document-content">
-
-<p>Hi! I’m a researcher in the <a href="https://www.wzb.eu/en/research/political-economy-of-development/institutions-and-political-inequality">Institutions and Political Inequality unit at the WZB Berlin Social Science Center</a>, and an affiliated member of&nbsp;the Research Training Group <a href="https://www.sowi.hu-berlin.de/en/dynamics">Dynamics of Demography, Democratic Processes and Public Policy (DYNAMICS)</a>. My work focuses on intergroup relations, prejudice, and outgroup avoidance, using experimental and quasi-experimental methods. In addition, I am interested in webscraping and the use of Large Language Models (LLM) in the social sciences. Feel free to <a href="mailto:lennard.naumann@wzb.eu">get in touch!</a></p>
+<main class="content column-page" id="quarto-document-content">
 
 
-</main> 
-  <hr class="about-sep">
-   <div class="about-links">
+
+
+<div class="quarto-about-trestles column-page">
+  <div class="about-entity">
+    <img src="portrait.jpg" class="about-image
+  rounded " style="width: 50%;">
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Lennard Naumann</h1>
+<p class="subtitle lead"></p><p>PhD Researcher<br>
+WZB Berlin Social Science Center<br>
+DYANMICS Research Training Group<br>
+<script type="text/javascript">
+<!--
+h='&#x77;&#122;&#98;&#46;&#x65;&#x75;';a='&#64;';n='&#108;&#x65;&#110;&#110;&#x61;&#114;&#100;&#46;&#110;&#x61;&#x75;&#x6d;&#x61;&#110;&#110;';e=n+a+h;
+document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail">'+e+'<\/'+'a'+'>');
+// -->
+</script><noscript>lennard.naumann at wzb dot eu</noscript></p><p></p>
+</div>
+<div class="quarto-title-meta column-page">
+  </div>
+</header>
+    <div class="about-links">
   <a href="https://github.com/lennardnau" class="about-link" rel="" target="">
     <i class="bi bi-github"></i>
-     <span class="about-link-text">Github</span>
+     <span class="about-link-text">Git</span>
   </a>
   <a href="https://scholar.google.de/citations?user=HitgLnwAAAAJ&amp;hl=de&amp;oi=ao" class="about-link" rel="" target="">
     <i class="bi bi-google"></i>
      <span class="about-link-text">Google Scholar</span>
   </a>
-  <a href="mailto:lennard.naumann@wzb.eu" class="about-link" rel="" target="">
-    <i class="bi bi-envelope"></i>
-     <span class="about-link-text">Email</span>
-  </a>
   <a href="https://orcid.org/0000-0003-4261-1080" class="about-link" rel="" target="">
      <span class="about-link-text">ORCID</span>
   </a>
 </div>
+  </div>
+  <div class="about-contents"><div id="hero-heading">
+<p>Hi! I’m a researcher in the <a href="https://www.wzb.eu/en/research/political-economy-of-development/institutions-and-political-inequality">Institutions and Political Inequality unit</a> at the WZB Berlin Social Science Center, and an affiliated member of&nbsp;the Research Training Group <a href="https://www.sowi.hu-berlin.de/en/dynamics">DYNAMICS</a>.</p>
+<p>My work focuses on prejudice and avoidance across ethnic and political divides: why people steer clear of those they see as different, and what this implies for how we live together as a society. To study this, I use experimental and observational causal inference methods. In addition, I am interested in webscraping and the use of Large Language Models (LLMs) in the social sciences.</p>
+<p>Feel free to <script type="text/javascript">
+<!--
+h='&#x77;&#122;&#98;&#46;&#x65;&#x75;';a='&#64;';n='&#108;&#x65;&#110;&#110;&#x61;&#114;&#100;&#46;&#110;&#x61;&#x75;&#x6d;&#x61;&#110;&#110;';e=n+a+h;
+document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail">'+'&#x67;&#x65;&#116;&#32;&#x69;&#110;&#32;&#116;&#x6f;&#x75;&#x63;&#104;&#x21;'+'<\/'+'a'+'>');
+// -->
+</script><noscript>get in touch! (lennard.naumann at wzb dot eu)</noscript></p>
+<section id="dissertation-chapters" class="level4">
+<h4 data-anchor-id="dissertation-chapters">Dissertation chapters</h4>
+<hr>
+<ul>
+<li><strong>Intergroup Contact, Empathy Education, and Refugee-Native Integration: Evidence from a Field Experiment in Lebanon</strong> (with Salma Mousa and Alex Scacco). <a href="#" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">[Abstract]</a> &nbsp;<a href="https://osf.io/fdbp3?mode=&amp;revisionId=&amp;view_only=">[Preregistration]</a> &nbsp;<a href="https://osf.io/6gukj">[PAP]</a>
+<div id="collapse1" class="collapse">
+<div class="card card-body" style="font-size: 0.9em; text-align: justify;">
+Intergroup contact and empathy education are widely believed to foster trust, tolerance and cooperation across group lines in deeply divided societies. We test these approaches independently and jointly in the context of refugee-host relations in Lebanon, where Syrian refugees comprise a quarter of the population. Our study embeds a popular existing family psycho-social support (FPSS) program targeting vulnerable youth in a field experiment, where Syrian and Lebanese youth were randomly assigned to either heterogeneous (Lebanese-Syrian) or homogeneous (Lebanese or Syrian) FPSS groups and to an empathy education or placebo curriculum focused on physical health and nutrition. We find that contact does not meaningfully change attitudes toward the outgroup, and has little effect on participation in future contact, such as attending events celebrating the outgroup’s culture 1-2 months after treatment. By contrast, we find that empathy education consistently improves both affect and policy attitudes toward the outgroup, and has positive behavioral effects. We find no evidence of positive interaction effects between the two treatments. In fact, combining contact and empathy training is less effective than either treatment alone. Our study points to empathy education as a cheaper, more scalable, and potentially more effective strategy for building social cohesion in conflict settings than intergroup contact.
 </div>
- <!-- /main -->
+</div></li>
+<li><strong>Outgroup Avoidance in Online Dating: Evidence from a Large-Scale Field Experiment</strong> <a href="#" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">[Abstract]</a> &nbsp;<a href="https://osf.io/h7e2y">[Preregistration]</a> &nbsp;<a href="https://osf.io/download/4aqxm/">[PAP]</a>
+<div id="collapse2" class="collapse">
+<div class="card card-body" style="font-size: 0.9em; text-align: justify;">
+Recent meta-analyses suggest that, while contact can reduce prejudice, the effects are small, particularly in well-powered field experimental studies with delayed outcome measurement. One reason intergroup contact may fail to produce larger effect sizes is that those prone to avoiding outgroup contact are less likely to benefit from or engage in such encounters. However, research into the drivers of intergroup avoidance is scarce. In this study, I systematically investigate the patterns and drivers of intergroup avoidance in an online dating context. In partnership with a large European online dating platform, I first analyse user data to examine the extent and covariates of ethnic bias in swiping behavior. Next, I conduct a large-scale field RCT in which users are randomly assigned to one of three brief video treatments. They delivered on the platform and designed to test three psychological mechanisms that potentially drive intergroup avoidance: ingroup norms, outgroup norms, and perceived group commonality. Behavioral swiping data is complemented by an endline survey including measures of intergroup contact preference, intent, and behavior.
+</div>
+</div></li>
+<li><strong>Chatting Across Divides: LLMs as Agents of Depolarization?</strong> <a href="#" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">[Abstract]</a> &nbsp;<a href="https://osf.io/mytu9/">[Preregistration]</a> &nbsp;<a href="https://osf.io/mytu9/files/ybnjv">[PAP]</a>
+<div id="collapse3" class="collapse">
+<div class="card card-body" style="font-size: 0.9em; text-align: justify;">
+Affective polarization, understood as animosity and avoidance between opposing partisans, is a growing concern for democratic societies. This paper tests whether brief interactions with an instructed large language model chatbot can reduce out-partisan animosity and avoidance. In a pre-registered 2 × 2 factorial Experiment with a representative German sample (N ≈ 1,600 and a one-week follow-up), re-spondents were randomly assigned to discuss a polarizing political issue with a value-based chatbot, a perspective-taking chatbot, both in sequence, or neither. The value-based chatbot increases self-reported real-world political discussions with outpartisans at follow-up, and both chatbots raise stated willingness to participate in future outpartisan conversations, though the latter outcome is difficult to cleanly interpret. The chatbots have tightly estimated null effects on outpartisan affect, avoidant preferences, and durable attitude change toward the bot’s position.
+</div>
+</div></li>
+</ul>
+</section>
+<section id="research" class="level4">
+<h4 data-anchor-id="research">Research</h4>
+<hr>
+<ul>
+<li><strong>“Native Flight” in Urban School Districts? Evidence from Primary School Registration Data in Berlin</strong> (with Bernd Beber, Moritz Matzner, and Macartan Humphreys). <a href="#" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">[Abstract]</a>
+<div id="collapse4" class="collapse">
+<div class="card card-body" style="font-size: 0.9em; text-align: justify;">
+We investigate parental school choice in Berlin, Germany. Anecdotal evidence suggests that nonmigrant “natives” take steps to avoid or seek out catchment area schools due to the ethnic composition of student bodies. Indeed, school segregation has been documented across Europe, but the lack of high-resolution data on school choice and migrant populations has made it difficult to precisely show the extent to which schools are more (or less) segregated than we would expect given catchment area demographics and to analyze the process that leads to such segregation. We contribute to this debate with an analysis of a never-before-used dataset of 35,000 school choice forms that parents must complete to enroll their child in elementary school. We combine this data with a newly compiled set of administrative data covering Berlin’s several hundred elementary school enrollment zones for the years 2000 to 2018, which includes demographic and socioeconomic zone characteristics, student population indicators, and various school attributes and performance metrics. We explore in particular the extent to which we see Schelling sorting, where even weak preferences for separation from another group (and small changes in zone composition) can dynamically spiral to produce extreme patterns of segregation, and we develop policy implications for how to counteract such dynamics.
+</div>
+</div></li>
+<li><strong>Political Connections: Measuring Political and Business Elite Networks</strong> (with Lisa Garbe, Yuequan Guo, and Macartan Humphreys). <a href="#" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">[Abstract]</a>
+<div id="collapse5" class="collapse">
+<div class="card card-body" style="font-size: 0.9em; text-align: justify;">
+Elite connections shape political and economic outcomes but are difficult to measure. Traditional methods rely on surveys or shared affiliations, which lack scalability and clear interpretation. We propose a scalable, interpretable approach to map elite networks by compiling elite lists, detecting co-appearances in media, coding interactions with large language models (LLMs), and constructing network ties. This complements conventional methods and suits dynamic elite politics. Applied to Germany (2013–2023), our data includes 750 parliamentarians and 1,051 top executives. We collected 42,366 articles from 30 newspapers, identifying co-appearances. Open-source LLMs code interactions such as meetings or conversations, enabling nuanced network definitions. We validate networks qualitatively and quantitatively by linking them to events like elections and comparing them with education-based networks. This method expands elite network research beyond typical scopes, offering scalable, interpretable insights into how political and economic elites connect and influence each other.
+</div>
+</div></li>
+<li><a href="https://journals.sagepub.com/doi/full/10.1177/07388942221092126"><strong>Power Law Distributions in Intrastate Conflict Intensity Dynamics</strong></a> (with Christoph Trinn). <em>Conflict Management and Peace Science, 40(4), 2022.</em> <a href="#" data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">[Abstract]</a>
+<div id="collapse6" class="collapse">
+<div class="card card-body" style="font-size: 0.9em; text-align: justify;">
+The discovery of power laws in conflict intensities has spurred numerous explanation attempts. Two different interpretations have persisted: the notion that power laws are spurious results of random processes and the opposing view that power-law distributions attest to endogenous dynamics linked to self-organized criticality (SOC). We substantiate the SOC forest-fire model for intrastate conflicts, conceptualizing conflict potential as social pressure, measured by horizontal inequality. This potential is triggered by infinitesimal events. Their occurrence depends on the interaction density between conflict actors, operationalized as the conjunction of state capacity and non-state governance. In a global analysis of 143 conflict dyads, we find that 40 conform to a power law and 33 to a stretched exponential distribution, the two outcomes predicted by the model. We find evidence that the forest-fire model is a plausible approximation of the dynamics of intrastate conflicts, accounting for both the conformity and the non-conformity to power laws.
+</div>
+</div></li>
+<li><a href="https://www.nature.com/articles/s41560-022-01095-6"><strong>Attributing agnostically detected large reductions in road CO2&nbsp;emissions to policy mixes</strong></a> (with Nicolas Koch, Felix Pretis, Nolan Ritter, and Moritz Schwarz). <em>Nature Energy 7, 2022.</em> <a href="#" data-bs-toggle="collapse" data-bs-target="#collapse8" aria-expanded="false" aria-controls="collapse8">[Abstract]</a>
+<div id="collapse8" class="collapse">
+<div class="card card-body" style="font-size: 0.9em; text-align: justify;">
+Policymakers combine many different policy tools to achieve emission reductions. However, there remains substantial uncertainty around which mixes of policies are effective. This uncertainty stems from the predominant focus of ex post policy evaluation on isolating effects of single, known policies. Here we introduce an approach to identify effective policy interventions in the EU road transport sector by detecting treatment effects as structural breaks in CO2&nbsp;emissions that can potentially occur in any country at any point in time from any number of a priori unknown policies. This search for ‘causes of effects’ within a statistical framework allows us to draw systematic inference on the effectiveness of policy mixes. We detect ten successful policy interventions that reduced emissions between 8% and 26%. The most successful policy mixes combine carbon or fuel taxes with green vehicle incentives and highlight that emissions reductions on a magnitude that matches the EU zero emission targets are possible.
+</div>
+</div></li>
+</ul>
+</section>
+<section id="policy-and-outreach" class="level4">
+<h4 data-anchor-id="policy-and-outreach">Policy and outreach</h4>
+<hr>
+<ul>
+<li><a href="https://www.wzb.eu/en/article/imbalance-of-power"><strong>Towards Genuine Collaboration in International Research</strong></a> (with Nora Chirikure). <em>WZB Mitteilungen 184, 2024.</em> <a href="#" data-bs-toggle="collapse" data-bs-target="#collapse7" aria-expanded="false" aria-controls="collapse7">[Abstract]</a>
+<div id="collapse7" class="collapse">
+<div class="card card-body" style="font-size: 0.9em; text-align: justify;">
+Researchers worldwide continue to face significantly unequal starting opportunities, particularly in terms of research funding, academic career paths, visas, and networking. Nora Chirikure and Lennard Naumann explore what is needed to establish truly equitable South-North research partnerships and to ensure the success of research originating from the Global South.
+</div>
+</div></li>
+</ul>
+
+
+</section>
+</div></div>
+</div>
+
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
-    // Ensure there is a toggle, if there isn't float one in the top right
-    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
-      const a = window.document.createElement('a');
-      a.classList.add('top-right');
-      a.classList.add('quarto-color-scheme-toggle');
-      a.href = "";
-      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
-      const i = window.document.createElement("i");
-      i.classList.add('bi');
-      a.appendChild(i);
-      window.document.body.appendChild(a);
-    }
-    setColorSchemeToggle(hasAlternateSentinel())
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
         if (clz.startsWith('code-annotation-')) {                     
@@ -365,7 +252,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("^(?:http:|https:)\/\/drganghe\.github\.io\/custom");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
@@ -379,6 +266,11 @@ ul.task-list li input[type="checkbox"] {
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
         }
       }
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
@@ -696,7 +588,7 @@ ul.task-list li input[type="checkbox"] {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>© 2025 Lennard Naumann</p>
+<p>© 2026 Lennard Naumann</p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;

@@ -1,22 +1,97 @@
 ---
-title: ""
+title: "Lennard Naumann"
 image: portrait.jpg
+page-navigation: false
+toc: false
+sidebar: false
+page-layout: full
 about:
-  template: jolla
+  id: hero-heading
+  template: trestles
   image-shape: rounded
-  image-width: 12rem
+  image-width: 50%
   links:
     - icon: github
       href: https://github.com/lennardnau
-      text: Github
+      text: Git
     - icon: google
       href: https://scholar.google.de/citations?user=HitgLnwAAAAJ&hl=de&oi=ao
       text: Google Scholar
-    - icon: envelope
-      href: mailto:lennard.naumann@wzb.eu
-      text: Email
     - href: https://orcid.org/0000-0003-4261-1080
       text: ORCID
 ---
 
-Hi! I'm a researcher in the [Institutions and Political Inequality unit at the WZB Berlin Social Science Center](https://www.wzb.eu/en/research/political-economy-of-development/institutions-and-political-inequality), and an affiliated member of the Research Training Group [Dynamics of Demography, Democratic Processes and Public Policy (DYNAMICS)](https://www.sowi.hu-berlin.de/en/dynamics). My work focuses on intergroup relations, prejudice, and outgroup avoidance, using experimental and quasi-experimental methods. In addition, I am interested in webscraping and the use of Large Language Models (LLM) in the social sciences. Feel free to [get in touch!](mailto:lennard.naumann@wzb.eu)
+
+
+:::{#hero-heading}
+
+Hi! I'm a researcher in the [Institutions and Political Inequality unit](https://www.wzb.eu/en/research/political-economy-of-development/institutions-and-political-inequality) at the WZB Berlin Social Science Center, and an affiliated member of the Research Training Group [DYNAMICS](https://www.sowi.hu-berlin.de/en/dynamics).
+
+My work focuses on prejudice and avoidance across ethnic and political divides: why people steer clear of those they see as different, and what this implies for how we live together as a society. To study this, I use experimental and observational causal inference methods. In addition, I am interested in webscraping and the use of Large Language Models (LLMs) in the social sciences.
+
+Feel free to [get in touch!](mailto:lennard.naumann@wzb.eu)
+
+
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| results: 'asis'
+
+library(tidyverse)
+library(glue)
+library(readxl)
+
+df <- read_xlsx("projects.xlsx")
+df$id <- 1:nrow(df)
+
+for (cat_name in unique(df$category)) {
+  cat("\n#### ", cat_name, "\n\n", sep = "")
+  cat("<hr>")
+  df.cat <- filter(df, category == cat_name)
+
+  for (i in 1:nrow(df.cat)) {
+    # Authors in parentheses, plain text (no links, no italics)
+    auth_vec <- str_split(df.cat$authors[i], ",", simplify = TRUE) |> str_squish()
+    if (df.cat$authors[i] == "." || all(auth_vec == "")) {
+      authors <- ""
+    } else if (length(auth_vec) == 1) {
+      authors <- paste0(" (with ", auth_vec, ").")
+    } else if (length(auth_vec) == 2) {
+      authors <- paste0(" (with ", paste(auth_vec, collapse = " and "), ").")
+    } else {
+      authors <- paste0(" (with ",
+                        paste(auth_vec[-length(auth_vec)], collapse = ", "),
+                        ", and ", last(auth_vec), ").")
+    }
+
+    # Title is a link only when a link is available
+    title <- if (df.cat$link[i] == ".") {
+      paste0("<strong>", df.cat$title[i], "</strong>")
+    } else {
+      paste0('<a href="', df.cat$link[i], '"><strong>', df.cat$title[i], '</strong></a>')
+    }
+
+    journal <- ifelse(df.cat$journal[i] == ".", "",
+                      paste0(" <em>", df.cat$journal[i], "</em>"))
+    prereg  <- ifelse(df.cat$prereg[i] == ".", "",
+                      paste0("&nbsp;<a href=", df.cat$prereg[i], ">[Preregistration]</a>"))
+    pap     <- ifelse(df.cat$pap[i] == ".", "",
+                      paste0("&nbsp;<a href=", df.cat$pap[i], ">[PAP]</a>"))
+
+    entry <- glue(
+      '{title}{authors}{journal}
+      <a href="#" data-bs-toggle="collapse" data-bs-target="#collapse{df.cat$id[i]}" aria-expanded="false" aria-controls="collapse{df.cat$id[i]}">[Abstract]</a> {prereg} {pap}
+      <div class="collapse" id="collapse{df.cat$id[i]}"><div class="card card-body" style="font-size: 0.9em; text-align: justify;">{df.cat$abstract[i]}</div></div>'
+    ) |> str_replace_all("\\n\\s*", " ")
+
+    cat("- ", entry, "\n", sep = "")
+  }
+
+  cat("\n")
+}
+
+```
+
+
