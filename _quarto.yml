@@ -9,7 +9,7 @@ title: Lennard Naumann
 subtitle: |
   PhD Researcher \
   WZB Berlin Social Science Center \
-  DYANMICS Research Training Group \
+  DYNAMICS Research Training Group \
   [lennard.naumann@wzb.eu](mailto:lennard.naumann@wzb.eu)
 
 description-meta: "Lennard Naumann Academic Website"
@@ -23,22 +23,10 @@ website:
   page-footer:
     left: © 2026 Lennard Naumann
   
-#format:
-#  html:
-#    theme: 
-#      light: 
-#        - flatly
-#        - custom_theming.css
-#      dark: 
-#        - darkly
-#        - custom_theming.css
-#    toc: true
-#    page-layout: full
 format:
   html:
     theme: cosmo
     css: custom_theming.css
-    toc: true
     footnotes-hover: true
     code-copy: true
     code-link: true
