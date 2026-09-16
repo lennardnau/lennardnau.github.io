@@ -27,7 +27,7 @@ about:
 
 Hi! I'm a researcher in the [Institutions and Political Inequality unit](https://www.wzb.eu/en/research/political-economy-of-development/institutions-and-political-inequality) at the WZB Berlin Social Science Center, and an affiliated member of the Research Training Group [DYNAMICS](https://www.sowi.hu-berlin.de/en/dynamics).
 
-My work focuses on prejudice and avoidance across ethnic and political divides: why people steer clear of those they see as different, and what this implies for how we live together as a society. To study this, I use experimental and observational causal inference methods. In addition, I am interested in webscraping and the use of Large Language Models (LLMs) in the social sciences.
+My work focuses on prejudice and avoidance across ethnic and political divides: why people steer clear of those they see as different, and what this implies for how we live together as a society. To study this, I use experimental and observational methods for causal inference. In addition, I am interested in web scraping and the use of large language models in the social sciences.
 
 Feel free to [get in touch!](mailto:lennard.naumann@wzb.eu)
 
